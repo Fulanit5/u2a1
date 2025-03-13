@@ -34,22 +34,22 @@ body {
 }
 
 /* Carrusel */
-.carrusel {
+.carrusel-container {
     display: flex;
-    overflow-x: auto;
+    justify-content: flex-end;
     width: 80%;
     margin: 20px auto;
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
 }
 
-.carrusel img {
-    width: 100px;
-    height: 75px;
-    margin: 5px;
-    border-radius: 5px;
-    cursor: pointer;
+.carrusel {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    height: 400px;
+    width: 250px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 10px;
 }
 
 .carrusel a {
@@ -57,6 +57,14 @@ body {
     color: white;
     font-weight: bold;
     display: block;
+    margin: 5px 0;
+}
+
+.carrusel img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 /* Botones */
@@ -68,6 +76,8 @@ body {
     color: white;
     font-weight: bold;
     transition: 0.3s;
+    display: inline-block;
+    margin: 10px;
 }
 
 .boton:hover {
@@ -110,5 +120,37 @@ p {
     color: black;
     padding: 10px;
     border-radius: 5px;
+}
+
+/* Formulario de Registro */
+.formulario {
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 5px;
+    width: 50%;
+    margin: auto;
+}
+
+.formulario input, .formulario textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.formulario button {
+    background-color: rgb(180, 0, 120);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.formulario button:hover {
+    background-color: rgb(150, 0, 100);
 }
 
