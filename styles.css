@@ -1,87 +1,114 @@
+/* estilos.css */
+
+/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f2f5;
+    background: linear-gradient(to bottom, rgb(225, 0, 152), black);
+    color: white;
 }
 
+/* Contenedor principal */
+.container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+/* Banner */
 .banner {
-    position: relative;
     width: 100%;
     height: 250px;
-    background-color: #1877f2;
-}
-
-.cover-image {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: url('ruta_de_tu_foto_de_fondo.jpg');
+    background: url('imagenes/bannery.heic') no-repeat center;
     background-size: cover;
-    background-position: center;
-    filter: blur(8px);
 }
 
-.profile-image {
-    position: absolute;
-    bottom: -50px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 120px;
-    height: 120px;
-    background-color: white;
+/* Imagen de perfil */
+.perfil {
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    background-image: url('ruta_de_tu_foto_de_perfil.jpg');
-    background-size: cover;
-    background-position: center;
-    border: 4px solid white;
+    border: 5px solid rgb(200, 0, 130);
+    margin-top: -75px;
 }
 
-.content {
-    width: 80%;
-    margin: 80px auto 20px;
+/* Carrusel */
+.carrusel {
     display: flex;
-    justify-content: center;
-}
-
-.posts-container {
-    width: 60%;
-    height: 500px;
-    overflow-y: auto;
+    overflow-x: auto;
+    width: 80%;
+    margin: 20px auto;
     padding: 10px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    scrollbar-width: thin;
-    scrollbar-color: #1877f2 #f0f2f5;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
 }
 
-.posts-container::-webkit-scrollbar {
-    width: 8px;
+.carrusel img {
+    width: 100px;
+    height: 75px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.posts-container::-webkit-scrollbar-thumb {
-    background-color: #1877f2;
-    border-radius: 4px;
+.carrusel a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    display: block;
 }
 
-.post {
-    background-color: #ffffff;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+/* Botones */
+.boton {
+    background-color: rgb(180, 0, 120);
+    border: 2px solid black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
-.post img {
-    width: 100%;
+.boton:hover {
+    background-color: rgb(150, 0, 100);
+    border-color: white;
+}
+
+/* Estilos de cada página individual */
+.pagina {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.imagen-principal {
+    width: 60%;
     height: auto;
-    aspect-ratio: 3/2;
-    border-radius: 8px;
+    display: block;
+    margin: auto;
 }
 
-.post p {
-    font-size: 14px;
-    line-height: 1.5;
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 20px;
+    font-style: italic;
     margin-top: 10px;
 }
+
+p {
+    width: 60%;
+    margin: 20px auto;
+    text-align: justify;
+    background: white;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+}
+
